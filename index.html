@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>শুভ ভাইফোঁটা | Two My Special Sisters</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Baloo+Da+2:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+
+</head> 
+
+<body>
+
+<div class="background">
+    <div class="decoration">🌺</div>
+    <div class="decoration">🪔</div>
+    <div class="decoration">🌸</div>
+    <div class="decoration">✨</div>
+</div>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <div class="logo">শুভ ভাইফোঁটা 🌺</div>
+
+    <div class="navigation">
+
+        <button class="nav-btn active"
+        onclick="showPage('home',this)">Home</button>
+
+        <button class="nav-btn"
+        onclick="showPage('memories',this)">Memories</button>
+
+        <button class="nav-btn"
+        onclick="showPage('reasons',this)">Reasons</button>
+
+        <button class="nav-btn"
+        onclick="showPage('surprise',this)">Surprise</button>
+
+        <button class="nav-btn"
+        onclick="showPage('letter',this)">Letter</button>
+
+    </div>
+
+</nav>
+
+<main>
+
+<!-- HOME PAGE -->
+
+<section class="page active home" id="home">
+
+    <div class="tag">
+        🪔 ভালোবাসার বন্ধনে ভাইফোঁটা
+    </div>
+
+    <h1>
+        To My <span>Special</span><br>
+        Sisters ♡
+    </h1>
+
+    <p class="description">
+
+        ভাই-বোনের এই মিষ্টি সম্পর্ক,
+        ভালোবাসা আর ছোট ছোট মুহূর্তের গল্প।
+
+        এই ছোট্ট উপহার শুধু তোমাদের জন্য।
+
+    </p>
+
+    <!-- BHAI PHONTA ILLUSTRATION -->
+
+    <div class="ritual-scene">
+
+        <div class="lamp">🪔</div>
+
+        <div class="gift-behind">🎁</div>
+
+        <div class="brother">
+
+            <div class="brother-hair"></div>
+
+            <div class="brother-head">
+
+                <div class="brother-eye"></div>
+
+                <div class="brother-smile"></div>
+
+                <div class="phonta"></div>
+
+            </div>
+
+            <div class="brother-body"></div>
+
+            <div class="brother-leg left"></div>
+            <div class="brother-leg right"></div>
+
+        </div>
+
+        <div class="sister">
+
+            <div class="sister-hair"></div>
+
+            <div class="sister-head">
+
+                <div class="sister-face-eye"></div>
+
+            </div>
+
+            <div class="sister-body"></div>
+
+            <div class="saree"></div>
+
+            <div class="sister-hand"></div>
+
+        </div>
+
+        <div class="alpana">❀</div>
+
+        <div class="floor"></div>
+
+    </div>
+
+    <button class="primary-btn"
+    onclick="showPage('memories',document.querySelectorAll('.nav-btn')[1])">
+
+        Explore Our Memories ♡
+
+    </button>
+
+</section>
+
+
+<!-- MEMORIES PAGE -->
+
+<!-- MEMORIES PAGE -->
+
+<section class="page" id="memories">
+
+    <h2 class="section-title">
+        Our Beautiful Memories 🌸
+    </h2>
+
+    <p class="section-subtitle">
+        কিছু মুহূর্ত, কিছু গল্প আর অনেকটা ভালোবাসা।
+    </p>
+
+    <!-- MEMORY CARDS -->
+
+    <div class="cards">
+
+        <div class="card memory-card"
+             onclick="openMemory('beautiful')">
+
+            <div class="emoji">📸</div>
+
+            <h3>Beautiful Moments</h3>
+
+            <p>
+                তিনটে সুন্দর ছবি,
+                আর অসংখ্য মিষ্টি স্মৃতি।
+            </p>
+
+            <span>Explore Memories →</span>
+
+        </div>
+
+
+        <div class="card memory-card"
+             onclick="openMemory('together')">
+
+            <div class="emoji">👨‍👩‍👧</div>
+
+            <h3>Get Together</h3>
+
+            <p>
+                একসঙ্গে কাটানো সময়গুলোই
+                সবচেয়ে সুন্দর।
+            </p>
+
+            <span>View Photo →</span>
+
+        </div>
+
+
+        <div class="card memory-card"
+             onclick="openMemory('special')">
+
+            <div class="emoji">🎉</div>
+
+            <h3>Special Days</h3>
+
+            <p>
+                আমাদের জীবনের
+                তিনটি বিশেষ উদযাপন।
+            </p>
+
+            <span>Explore Days →</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- BEAUTIFUL MOMENTS -->
+
+    <div class="memory-content" id="beautiful">
+
+        <h2 class="section-title">
+            Beautiful Moments 📷
+        </h2>
+
+        <div class="slider-container">
+
+            <button class="slider-btn"
+                    onclick="changeSlide(-1)">
+                ❮
+            </button>
+
+            <div class="slider">
+
+                <img id="memoryImage"
+                     src="assets/sister1.jpeg"
+                     alt="Beautiful Memory">
+
+            </div>
+
+            <button class="slider-btn"
+                    onclick="changeSlide(1)">
+                ❯
+            </button>
+
+        </div>
+
+        <p id="slideCounter">1 / 3</p>
+
+        <button class="primary-btn"
+                onclick="closeMemory()">
+            ← Back to Memories
+        </button>
+
+    </div>
+
+
+    <!-- GET TOGETHER -->
+
+    <div class="memory-content" id="together">
+
+        <h2 class="section-title">
+            Our Get Together ❤️
+        </h2>
+
+        <div class="together-photo">
+
+            <img src="assets/sister4.jpeg"
+                 alt="Our Get Together">
+
+        </div>
+
+        <p class="section-subtitle">
+            একসঙ্গে হাসি, গল্প আর আনন্দে ভরা
+            কিছু সুন্দর মুহূর্ত।
+        </p>
+
+        <button class="primary-btn"
+                onclick="closeMemory()">
+            ← Back to Memories
+        </button>
+
+    </div>
+
+
+    <!-- SPECIAL DAYS -->
+
+    <div class="memory-content" id="special">
+
+        <h2 class="section-title">
+            Our Special Days 🌺
+        </h2>
+
+        <div class="cards">
+
+            <div class="card special-card">
+
+                <div class="emoji">❤️</div>
+
+                <h3>ভাইফোঁটা</h3>
+
+                <p>
+                    ফোঁটা, মিষ্টি আর অনেক ভালোবাসা।
+                    এই সুন্দর দিনটা আমাদের কাছে
+                    সবসময় বিশেষ।
+                </p>
+
+            </div>
+
+
+            <div class="card special-card">
+
+                <div class="emoji">🎀</div>
+
+                <h3>রাখি বন্ধন</h3>
+
+                <p>
+                    রাখির বন্ধনে ভালোবাসা,
+                    খুনসুটি আর একে অপরের
+                    পাশে থাকার গল্প।
+                </p>
+
+            </div>
+
+
+            <div class="card special-card">
+
+                <div class="emoji">🌺</div>
+
+                <h3>দুর্গাপুজো</h3>
+
+                <p>
+                    কলকাতার ঠাকুর দেখা,
+                    প্যান্ডেল ঘোরা আর একসঙ্গে
+                    পুজোর আনন্দ।
+                </p>
+
+            </div>
+
+        </div>
+
+        <button class="primary-btn"
+                onclick="closeMemory()">
+            ← Back to Memories
+        </button>
+
+    </div>
+
+</section>
+
+<!-- REASONS PAGE -->
+
+<section class="page" id="reasons">
+
+    <h2 class="section-title">
+        Why You Are Special 💗
+    </h2>
+
+    <p class="section-subtitle">
+        তোদের মধ্যে এমন কিছু জিনিস আছে,
+        যেগুলো তোদের আরও স্পেশাল করে তোলে।
+    </p>
+
+    <div class="cards">
+
+        <div class="reason">
+
+            <div class="emoji">🌻</div>
+
+            <h3>Your Smile</h3>
+
+            <p>
+                তোদের হাসিই আমাদের
+                প্রতিটি মুহূর্তকে সুন্দর করে তোলে।
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <div class="emoji">🧸</div>
+
+            <h3>Your Kindness</h3>
+
+            <p>
+                তোদের সুন্দর মনটাই তোদের
+                সবচেয়ে বড় পরিচয়।
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <div class="emoji">🌈</div>
+
+            <h3>Your Presence</h3>
+
+            <p>
+                তোরা পাশে থাকলে জীবনটা
+                আরও রঙিন হয়ে ওঠে।
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SURPRISE PAGE -->
+
+<section class="page surprise" id="surprise">
+
+    <h2 class="section-title">
+        A Little Surprise 🎁
+    </h2>
+
+    <p>
+        তোমাদের জন্য একটা ছোট্ট উপহার লুকিয়ে রেখেছি।
+    </p>
+
+    <div class="gift-box" onclick="openGift()">
+
+        🎁
+
+    </div>
+
+    <p>Tap the gift to open your surprise!</p>
+
+    <div id="giftMessage">
+
+        <h2 style="color:#a62c32;">
+            A Sweet Surprise! 💝
+        </h2>
+
+        <div class="gift-items">
+
+            <span>🌹</span>
+            <span>🍫</span>
+            <span>💐</span>
+
+        </div>
+
+        <h3>Lots of Love for You!</h3>
+
+        <p style="margin-top:15px;line-height:2;">
+
+            একটা ছোট্ট চকলেট,
+            একগুচ্ছ সুন্দর ফুল
+            আর অনেকটা ভালোবাসা।
+
+            তোমাদের জীবন সবসময় মিষ্টি
+            আর সুন্দর হয়ে উঠুক।
+
+        </p>
+
+        <h2 style="margin-top:20px;">
+            শুভ ভাইফোঁটা! ❤️
+        </h2>
+
+    </div>
+
+</section>
+
+
+<!-- LETTER PAGE -->
+
+<section class="page" id="letter">
+
+    <h2 class="section-title">
+        A Letter For You 💌
+    </h2>
+
+    <div class="letter">
+
+        <h2>প্রিয় দুই বোন, ❤️</h2>
+
+        <p>
+
+      জানিস, জীবনে কিছু সম্পর্ক থাকে,
+    যেগুলোকে কোনো শব্দে বোঝানো যায় না।
+
+    তোদের সঙ্গে কাটানো ছোট ছোট মুহূর্ত,
+    হাসি, গল্প, খুনসুটি আর একসঙ্গে ঘোরার
+    স্মৃতিগুলো আমার কাছে ভীষণ স্পেশাল।
+
+    কখনও ঝগড়া, কখনও দুষ্টুমি,
+    আবার কখনও একে অপরের পাশে থাকা।
+
+    এভাবেই তো আমাদের সম্পর্কটা আরও সুন্দর হয়ে উঠেছে।
+
+    তোদের জীবনের প্রতিটা দিন আনন্দে ভরে উঠুক।
+    তোদের সব স্বপ্ন একদিন সত্যি হোক।
+
+    সবসময় ভালো থাকিস, হাসিখুশি থাকিস
+    আর নিজেদের মতো সুন্দর থাকিস।
+
+    তোদের জন্য রইল একরাশ ভালোবাসা
+    আর অনেক অনেক শুভেচ্ছা।
+
+        </p>
+
+        <br>
+
+        <p>ইতি,</p>
+
+        <h3 style="color:#a62c32;">
+            তোমাদের প্রিয় ভাই ❤️
+        </h3>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+
+    🌺 শুভ ভাইফোঁটা 🌺
+
+    <br>
+
+    Made with Love by Your Brother ❤️
+
+</footer>
+
+</body>
+</html>
